@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QnA_Platform.Persistence;
 
 namespace QnA_Platform.Persistence.Migrations
 {
     [DbContext(typeof(QnADbContext))]
-    partial class QnADbContextModelSnapshot : ModelSnapshot
+    [Migration("20220911100406_addUserTablewithSeededData")]
+    partial class addUserTablewithSeededData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

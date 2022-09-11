@@ -5,4 +5,8 @@
     <RootNamespace>QnA_Platform.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.0" />
+  </ItemGroup>
+
 </Project>
