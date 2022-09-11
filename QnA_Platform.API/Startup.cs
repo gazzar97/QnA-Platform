@@ -46,20 +46,15 @@ namespace QnA_Platform.API
                    c.SwaggerDoc("v1", new OpenApiInfo { Title = "QnAPlatformAPI", Version = "v1" })
                 );
 
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = $"https://{Configuration["Auth0:Domain"]}/";
-                options.Audience = Configuration["Auth0:Audience"];
-            });
 
 
-
-
+            // usser name :yzfbsgekawwrsf:
+            // passwotd of db : d3bc50e511b48755aeaba14f3cab95b6de7dd4fb53c2adfb9c4e971a301ad2aa
+            // port : 5432
+            // server : ec2-52-200-5-135.compute-1.amazonaws.com
+            // database name : d7fq6l2l431vfo
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -42,8 +42,8 @@ namespace QnA_Platform.Application.Unit_Tests.Questions.Queries
             var result = await handler.Handle(new GetQuestionDetailQuery() { QuestionId = 1}, CancellationToken.None);
 
             result.ShouldBeOfType<GetQuestionDetailResponse>();
-            
-            result.QuestionDetail.QuestionHeader.ShouldBe("How are you?");
+
+            result.Success.ShouldBeTrue();
             
         }
 

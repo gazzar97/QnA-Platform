@@ -47,9 +47,9 @@ namespace QnA_Platform.Application.Features.Questions
             {
                 var questionDetailDto = _mapper.Map<QuestionDetailVm>(question);
 
-                var answers = _answerRepository.ListAllByQuestionIdAsync(request.QuestionId);
+                //var answers = _answerRepository.ListAllByQuestionIdAsync(request.QuestionId);
 
-                questionDetailDto.Answers = _mapper.Map<List<AnswerQuestionDto>>(answers);
+               // questionDetailDto.Answers = _mapper.Map<List<AnswerQuestionDto>>(answers);
                 getQuestionDetailResponse.Message = $"Question with the following ID:{request.QuestionId} is found";
                 getQuestionDetailResponse.QuestionDetail = questionDetailDto;
 
