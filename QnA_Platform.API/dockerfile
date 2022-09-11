@@ -1,3 +1,0 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS baseWORKDIR /app
-EXPOSE 80
-EXPOSE 443FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS buildWORKDIR /srcCOPY ["./QnA_Platform.API.csproj", "src/"]RUN dotnet restore "src/QnA_Platform.API/QnA_Platform.API.csproj"COPY . .WORKDIR "/src/"RUN dotnet build "QnA_Platform.API.csproj" -c Release -o /app/buildFROM build AS publishRUN dotnet publish "QnA_Platform.API.csproj" -c Release -o /app/publishFROM base AS finalWORKDIR /appCOPY --from=publish /app/publish .ENTRYPOINT ["dotnet", "QnA_Platform.API.dll"]

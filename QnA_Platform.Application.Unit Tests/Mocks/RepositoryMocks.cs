@@ -66,7 +66,7 @@ namespace QnA_Platform.Application.Unit_Tests.Mocks
 
         }
 
-        public static Mock<IAnswerRepository> GetAnswersRepository()
+        public static Mock<IAsyncRepository<Answer>> GetAnswersRepository()
         {
             var answers = new List<Answer>
             {
@@ -101,9 +101,12 @@ namespace QnA_Platform.Application.Unit_Tests.Mocks
 
 
             };
-            var mockAnswerRepository = new Mock<IAnswerRepository>();
+            var mockAnswerRepository = new Mock<IAsyncRepository<Answer>>();
 
             mockAnswerRepository.Setup(repo => repo.ListAllAsync()).ReturnsAsync(answers);
+
+            mockAnswerRepository.Setup(repo => repo.AddAsync(answers[0])).ReturnsAsync(answers[0]);
+
 
             mockAnswerRepository.Setup(repo => repo.AddAsync(It.IsAny<Answer>())).ReturnsAsync(
                 (Answer answer) =>

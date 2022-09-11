@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Answers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\QnA_Platform.Application\QnA_Platform.Application.csproj" />
   </ItemGroup>
 

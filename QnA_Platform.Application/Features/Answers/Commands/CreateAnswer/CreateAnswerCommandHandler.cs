@@ -13,16 +13,21 @@ namespace QnA_Platform.Application.Features.Answers.Commands.CreateAnswer
     public class CreateAnswerCommandHandler : IRequestHandler<CreateAnswerCommand, CreateAnswerCommandResponse>
     {
         private readonly IAsyncRepository<Answer> _answerRepository;
-        private readonly IQuestionRepository _questionRepository;
+        private readonly IAsyncRepository<Question> _questionRepository;
         private readonly IMapper _mapper;
 
-        public CreateAnswerCommandHandler(IAsyncRepository<Answer> answerRepository, IMapper mapper, IQuestionRepository questionRepository)
+        public CreateAnswerCommandHandler(IAsyncRepository<Answer> answerRepository, IMapper mapper, IAsyncRepository<Question> questionRepository)
         {
             _answerRepository = answerRepository;
             _mapper = mapper;
             _questionRepository = questionRepository;
         }
+        public CreateAnswerCommandHandler(IAsyncRepository<Answer> answerRepository, IMapper mapper)
+        {
 
+            _answerRepository = answerRepository;
+            _mapper = mapper;
+        }
         public async Task<CreateAnswerCommandResponse> Handle(CreateAnswerCommand request, CancellationToken cancellationToken)
         {
             var createAnswerCommandResponse = new CreateAnswerCommandResponse();
