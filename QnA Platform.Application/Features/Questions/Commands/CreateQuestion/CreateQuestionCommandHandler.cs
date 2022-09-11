@@ -12,13 +12,13 @@ namespace QnA_Platform.Application.Features.Questions.Commands.CreateQuestion
 {
     public class CreateQuestionCommandHandler : IRequestHandler<CreateQuestionCommand, CreateQuestionCommandResponse>
     {
-        private readonly IQuestionRepository _questionRepository;
+        private readonly IAsyncRepository<Question> _questionRepository;
         private readonly IMapper _mapper;
 
-        public CreateQuestionCommandHandler(IQuestionRepository questionRepository,IMapper mapper)
+        public CreateQuestionCommandHandler(IMapper mapper, IAsyncRepository<Question> questionRepository)
         {
-            _questionRepository = questionRepository;
             _mapper = mapper;
+            _questionRepository = questionRepository;
         }
 
         public async Task<CreateQuestionCommandResponse> Handle(CreateQuestionCommand request, CancellationToken cancellationToken)

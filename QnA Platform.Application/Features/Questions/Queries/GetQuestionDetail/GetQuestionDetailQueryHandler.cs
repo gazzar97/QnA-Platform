@@ -25,6 +25,12 @@ namespace QnA_Platform.Application.Features.Questions
             _answerRepository = answerRepository;
                 
         }
+        public GetQuestionDetailQueryHandler(IAsyncRepository<Question> questionRepository, IMapper mapper)
+        {
+
+            _mapper = mapper;
+            _questionRepository = questionRepository;
+        }
         public async Task<GetQuestionDetailResponse> Handle(GetQuestionDetailQuery request, CancellationToken cancellationToken)
         {
             var getQuestionDetailResponse = new GetQuestionDetailResponse();
