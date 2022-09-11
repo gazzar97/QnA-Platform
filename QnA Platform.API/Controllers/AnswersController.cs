@@ -63,7 +63,7 @@ namespace QnA_Platform.API.Controllers
 
         }
         [HttpPut("{AnswerID}/votes", Name = "UpdateAnswerVoteScore")]
-        [Authorize]
+        
         public async Task<ActionResult<UpdateAnswerVoteScoreCommandResponse>> UpdateAnswerVoteScore([FromBody] AnswerVoteScoreDto answer, int id,int AnswerID)
         {
 
