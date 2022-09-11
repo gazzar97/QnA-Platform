@@ -22,6 +22,7 @@ namespace QnA_Platform.Persistence
 
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<IAnswerRepository, AnswerRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             
             return services;
         }

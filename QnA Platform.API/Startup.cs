@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,9 +44,20 @@ namespace QnA_Platform.API
               });
             services.AddSwaggerGen(c =>
                    c.SwaggerDoc("v1", new OpenApiInfo { Title = "QnAPlatformAPI", Version = "v1" })
-
-
                 );
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = $"https://{Configuration["Auth0:Domain"]}/";
+                options.Audience = Configuration["Auth0:Audience"];
+            });
+
+
+
 
         }
 
@@ -70,6 +82,7 @@ namespace QnA_Platform.API
 
 
             app.UseCors("Open");
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

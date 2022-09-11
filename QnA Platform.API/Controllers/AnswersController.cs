@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QnA_Platform.Application.Features.Answers.Commands.CreateAnswer;
@@ -62,6 +63,7 @@ namespace QnA_Platform.API.Controllers
 
         }
         [HttpPut("{AnswerID}/votes", Name = "UpdateAnswerVoteScore")]
+        [Authorize]
         public async Task<ActionResult<UpdateAnswerVoteScoreCommandResponse>> UpdateAnswerVoteScore([FromBody] AnswerVoteScoreDto answer, int id,int AnswerID)
         {
 

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\QnA Platform.Domain\QnA Platform.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Users\Commands\" />
+  </ItemGroup>
+
 </Project>
