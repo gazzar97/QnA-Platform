@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QnA Platform.Application\QnA_Platform.Application.csproj" />
+    <Folder Include="Answers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Answers\" />
+    <ProjectReference Include="..\QnA_Platform.Application\QnA_Platform.Application.csproj" />
   </ItemGroup>
 
 </Project>

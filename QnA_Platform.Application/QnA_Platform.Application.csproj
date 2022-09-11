@@ -15,11 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QnA Platform.Domain\QnA_Platform.Domain.csproj" />
+    <Folder Include="Features\Users\Commands\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Users\Commands\" />
+    <ProjectReference Include="..\QnA_Platform.Domain\QnA_Platform.Domain.csproj" />
   </ItemGroup>
 
 </Project>

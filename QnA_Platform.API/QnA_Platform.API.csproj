@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QnA Platform.Application\QnA_Platform.Application.csproj" />
-    <ProjectReference Include="..\QnA Platform.Persistence\QnA_Platform.Persistence.csproj" />
+    <ProjectReference Include="..\QnA_Platform.Application\QnA_Platform.Application.csproj" />
+    <ProjectReference Include="..\QnA_Platform.Persistence\QnA_Platform.Persistence.csproj" />
   </ItemGroup>
 
 
