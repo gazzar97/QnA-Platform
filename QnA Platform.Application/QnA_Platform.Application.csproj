@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QnA Platform.Domain\QnA Platform.Domain.csproj" />
+    <ProjectReference Include="..\QnA Platform.Domain\QnA_Platform.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

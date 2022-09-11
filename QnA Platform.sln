@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B2B5E094-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{867238E1-197B-48C8-B32E-75205E3A2359}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA Platform.Domain", "QnA Platform.Domain\QnA Platform.Domain.csproj", "{C42D452C-7E06-4D95-9616-4BF4BBB9EE17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA_Platform.Domain", "QnA Platform.Domain\QnA_Platform.Domain.csproj", "{C42D452C-7E06-4D95-9616-4BF4BBB9EE17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA Platform.Application", "QnA Platform.Application\QnA Platform.Application.csproj", "{C020D6BD-6D23-4610-8E23-7BD90D2385AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA_Platform.Application", "QnA Platform.Application\QnA_Platform.Application.csproj", "{C020D6BD-6D23-4610-8E23-7BD90D2385AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA Platform.Persistence", "QnA Platform.Persistence\QnA Platform.Persistence.csproj", "{DC516D1C-7C98-4DB0-9F3F-96F139779028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA_Platform.Persistence", "QnA Platform.Persistence\QnA_Platform.Persistence.csproj", "{DC516D1C-7C98-4DB0-9F3F-96F139779028}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA Platform.API", "QnA Platform.API\QnA Platform.API.csproj", "{1E15890B-ED71-4108-8ED6-87807DFE4CC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QnA_Platform.API", "QnA Platform.API\QnA_Platform.API.csproj", "{1E15890B-ED71-4108-8ED6-87807DFE4CC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QnA Platform.Application.Unit Tests", "QnA Platform.Application.Unit Tests\QnA Platform.Application.Unit Tests.csproj", "{32800AA8-2E25-4FAF-BD2F-5A22037E19F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QnA_Platform.Application.Unit Tests", "QnA Platform.Application.Unit Tests\QnA_Platform.Application.Unit Tests.csproj", "{32800AA8-2E25-4FAF-BD2F-5A22037E19F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
